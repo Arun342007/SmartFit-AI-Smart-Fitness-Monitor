@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Home - Smart Fitness Monitor{% endblock %}
+{% block content %}
+<div class="hero text-center p-5 rounded-4 mb-4">
+  <h1 class="display-5 fw-bold">AI-Powered Smart Fitness Tracking &amp;<br>Personalized Health Monitoring System</h1>
+  <p class="lead mt-3 col-lg-8 mx-auto">
+    An intelligent healthcare and fitness demo application that uses simple AI/ML concepts
+    together with wearable-style sensor data to monitor activity, sleep, heart rate and SpO2 —
+    and to demonstrate a complete Software Configuration Management (Git, GitHub, Jenkins, Docker) pipeline.
+  </p>
+  <a href="{{ url_for('dashboard') }}" class="btn btn-lg btn-primary mt-3 px-4">Start Monitoring</a>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h5 class="card-title">📊 Health Dashboard</h5>
+        <p class="card-text">Track heart rate, steps, calories, sleep and SpO2 at a glance.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h5 class="card-title">🤖 Risk Prediction (Demo)</h5>
+        <p class="card-text">A small demo ML model estimates Low / Moderate / High risk from sample inputs.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h5 class="card-title">🥗 Personalized Tips</h5>
+        <p class="card-text">Simple, rule-based exercise, diet and sleep recommendations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-warning mt-4">
+  <strong>Disclaimer:</strong> This is an educational/demo application built for a Software
+  Configuration Management (SCM) academic project. It does not provide real medical diagnosis.
+</div>
+{% endblock %}

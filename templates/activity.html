@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Activity - Smart Fitness Monitor{% endblock %}
+{% block content %}
+<h2 class="mb-4">Activity Monitoring</h2>
+
+<div class="row">
+  <div class="col-lg-5 mb-4">
+    <div class="card">
+      <div class="card-header">Log an Activity</div>
+      <div class="card-body">
+        <form method="POST">
+          <div class="mb-3">
+            <label class="form-label">Activity Type</label>
+            <select name="activity_type" class="form-select">
+              <option value="Walking">Walking</option>
+              <option value="Running">Running</option>
+              <option value="Cycling">Cycling</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Duration (minutes)</label>
+            <input type="number" name="duration_minutes" min="1" max="600" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Log Activity</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-7 mb-4">
+    <div class="card">
+      <div class="card-header">Recent Activity Statistics</div>
+      <div class="card-body p-0">
+        <table class="table mb-0">
+          <thead><tr><th>Type</th><th>Duration (min)</th><th>Calories (est.)</th><th>Logged At</th></tr></thead>
+          <tbody>
+            {% for a in activities %}
+            <tr>
+              <td>{{ a['activity_type'] }}</td>
+              <td>{{ a['duration_minutes'] }}</td>
+              <td>{{ a['calories_burned'] }}</td>
+              <td>{{ a['logged_at'] }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="4" class="text-center text-muted py-3">No activities logged yet.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

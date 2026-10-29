@@ -1,0 +1,15 @@
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+instance/
+*.db
+.git/
+.gitignore
+.pytest_cache/
+test-results.xml
+.vscode/
+.idea/
+Jenkinsfile
+README.md

@@ -1,0 +1,17 @@
+services:
+  smart-fitness-health:
+    build: .
+    image: smart-fitness-health:latest
+    container_name: smart-fitness-health-container
+    ports:
+      - "5000:5000"
+    environment:
+      # Set a real secret in production: SECRET_KEY=... docker compose up
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
+    volumes:
+      # Persist the SQLite databases between container restarts
+      - fitness-data:/app/instance
+    restart: unless-stopped
+
+volumes:
+  fitness-data:

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Recommendations - Smart Fitness Monitor{% endblock %}
+{% block content %}
+<h2 class="mb-4">Personalized Recommendations (Demo)</h2>
+
+<div class="card mb-4">
+  <div class="card-header">Update Your Inputs</div>
+  <div class="card-body">
+    <form method="POST" class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label">Activity Level</label>
+        <select name="activity_level" class="form-select">
+          <option value="low">Low</option>
+          <option value="moderate" selected>Moderate</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Sleep Hours</label>
+        <input type="number" step="0.1" name="sleep_hours" min="0" max="24" class="form-control" value="7">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">BMI</label>
+        <input type="number" step="0.1" name="bmi" min="10" max="70" class="form-control" value="22">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Get Recommendations</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header">🏋️ Exercise</div>
+      <ul class="list-group list-group-flush">
+        {% for item in recs['exercise'] %}<li class="list-group-item">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header">🥗 Diet</div>
+      <ul class="list-group list-group-flush">
+        {% for item in recs['diet'] %}<li class="list-group-item">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header">😴 Sleep</div>
+      <ul class="list-group list-group-flush">
+        {% for item in recs['sleep'] %}<li class="list-group-item">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <div class="card-header">🚶 Daily Activity</div>
+      <ul class="list-group list-group-flush">
+        {% for item in recs['daily_activity'] %}<li class="list-group-item">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

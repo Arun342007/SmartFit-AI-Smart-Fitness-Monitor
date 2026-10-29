@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Runtime data (SQLite databases are created on first run)
+instance/
+*.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+test-results.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jenkins
+.jenkins/

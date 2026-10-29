@@ -1,0 +1,6 @@
+# Optional: live webcam exercise coach (run locally, needs a real webcam).
+# Includes the core requirements. Keep these versions together: newer MediaPipe
+# releases removed the `mp.solutions` API that this project uses.
+-r requirements.txt
+opencv-contrib-python==4.11.0.86
+mediapipe==0.10.21

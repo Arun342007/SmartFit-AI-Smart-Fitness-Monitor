@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Alerts - Smart Fitness Monitor{% endblock %}
+{% block content %}
+<h2 class="mb-4">Emergency / Demo Alerts</h2>
+
+<div class="alert alert-warning">
+  Alerts shown here are generated from simple fixed thresholds for demonstration purposes only.
+  They are <strong>not medical diagnoses</strong> and should never be relied on in a real emergency.
+</div>
+
+<div class="card">
+  <div class="card-header">Recent Alerts</div>
+  <div class="card-body p-0">
+    <table class="table mb-0">
+      <thead><tr><th>Type</th><th>Message</th><th>Severity</th><th>Created At</th></tr></thead>
+      <tbody>
+        {% for a in alerts %}
+        <tr class="severity-{{ a['severity']|lower }}">
+          <td>{{ a['alert_type'] }}</td>
+          <td>{{ a['message'] }}</td>
+          <td><span class="badge bg-{{ 'danger' if a['severity'] == 'High' else 'warning' }}">{{ a['severity'] }}</span></td>
+          <td>{{ a['created_at'] }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4" class="text-center text-muted py-3">No alerts generated yet. Try the Health Prediction page with extreme values.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
