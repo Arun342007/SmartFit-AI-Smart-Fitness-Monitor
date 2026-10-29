@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI-Powered Smart Fitness Tracking and Personalized Health Monitoring System
 
 An academic **Software Configuration Management (SCM)** project that pairs a Flask +
@@ -214,3 +215,7 @@ deployed, and automatic deployment (CD).
 This project is an **academic SCM/DevOps demonstration**. Predictions, alerts,
 recommendations, nutrition information and form feedback are for **educational purposes
 only** and do **not** constitute medical, dietetic or training advice.
+=======
+# SmartFit-AI-Smart-Fitness-Monitor
+A web-based fitness monitoring system for workout tracking, nutrition management, and fitness progress visualization.
+>>>>>>> 54c73fadc1e884151cba17d77b4f8c540edf4a8d
