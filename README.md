@@ -215,6 +215,6 @@ This project is an **academic SCM/DevOps demonstration**. Predictions, alerts,
 recommendations, nutrition information and form feedback are for **educational purposes
 only** and do **not** constitute medical, dietetic or training advice.
 
-=======
+
 # SmartFit-AI-Smart-Fitness-Monitor
 A web-based fitness monitoring system for workout tracking, nutrition management, and fitness progress visualization.
