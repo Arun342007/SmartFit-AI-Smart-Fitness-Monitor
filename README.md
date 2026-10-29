@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AI-Powered Smart Fitness Tracking and Personalized Health Monitoring System
 
 An academic **Software Configuration Management (SCM)** project that pairs a Flask +
